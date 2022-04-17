@@ -13,12 +13,10 @@ namespace WebApplication1.Controllers
             _mediator = mediator;
         }
         [HttpGet]
-        public IActionResult AddBookController([FromQuery] string bookName)
+        public async Task<IActionResult> AddBookControllerAsync([FromQuery] string bookName)
         {
-            var response = _mediator.Send(new AddCommand() { Name = bookName });
-            //AddBookInput bookInput = new AddBookInput() { Name = bookName };
-            //AddBookOutput bookOutput = _mediator.Execute(bookInput);
-            return base.Ok();
+            var response = await _mediator.Send(new AddCommand() { Name = bookName });
+            return base.Ok(response);
         }
         public IActionResult Index()
         {
