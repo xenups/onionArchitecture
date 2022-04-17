@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Book.Core.Contracts\Book.Core.Contracts.csproj" />
+    <ProjectReference Include="..\Book.Core.Domain\Book.Core.Domain.csproj" />
+    <ProjectReference Include="..\Book.Infra.Data.Sql\Book.Infra.Data.Sql.csproj" />
+  </ItemGroup>
+
+</Project>
