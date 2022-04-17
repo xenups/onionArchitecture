@@ -1,7 +1,9 @@
-using Book.Core.ApplicationServices.Book;
 using Book.Infra.Data.Sql;
 using Microsoft.EntityFrameworkCore;
 using Book.Core.Contracts.Book;
+using System.Reflection;
+using MediatR;
+using Book.Core.ApplicationServices.Book;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,8 +13,8 @@ builder.Services.AddDbContext<BookDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<IBookRepository, BookRepository>();
-builder.Services.AddTransient<IAddBookService, AddBookService>();
-
+//builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(typeof(AddBookService).GetTypeInfo().Assembly);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

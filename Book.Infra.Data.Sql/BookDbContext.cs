@@ -6,6 +6,6 @@ namespace Book.Infra.Data.Sql
     public class BookDbContext : DbContext
     {
         public BookDbContext(DbContextOptions<BookDbContext> options) : base(options) { }
-        public DbSet<Core.Domain.Book> Books { get; set; }
+        public DbSet<Core.Domain.BookD> Books { get; set; }
     }
 }

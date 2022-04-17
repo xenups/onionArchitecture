@@ -1,28 +1,26 @@
 ﻿using Book.Core.Contracts.Book;
 using Book.Core.Domain;
-using Book.Infra.Data.Sql;
+using MediatR;
 
 namespace Book.Core.ApplicationServices.Book
 {
-    public class AddBookService : IAddBookService
+
+    public class AddBookService : IRequestHandler<AddCommand, AddResponse>
     {
         private readonly IBookRepository _bookRepository;
         public AddBookService(IBookRepository bookRepository)
         {
             _bookRepository = bookRepository;
         }
-
-        public AddBookOutput Execute(AddBookInput addBookInput)
+        public async Task<AddResponse> Handle(AddCommand request, CancellationToken cancellationToken)
         {
-            Domain.Book book = new Domain.Book()
+            BookD book = new BookD()
             {
                 CreatedDate = DateTime.UtcNow,
-                Name = addBookInput.Name,
+                Name = request.Name,
             };
             _bookRepository.Add(book);
-            AddBookOutput output = new AddBookOutput() { Name = book.Name, Id = book.Id, CreatedDate = book.CreatedDate };
-            return output;
-
+            return new AddResponse() { Id = book.Id, Name = book.Name, CreatedDate = book.CreatedDate };
         }
     }
 }
