@@ -14,12 +14,12 @@ namespace Book.Core.ApplicationServices.Book
 
         public AddBookOutput Execute(AddBookInput addBookInput)
         {
-            BookDomain book = new BookDomain()
+            Domain.Book book = new Domain.Book()
             {
                 CreatedDate = DateTime.UtcNow,
                 Name = addBookInput.Name,
             };
-            _bookRepository.AddBook(book);
+            _bookRepository.Add(book);
             AddBookOutput output = new AddBookOutput() { Name = book.Name, Id = book.Id, CreatedDate = book.CreatedDate };
             return output;
 

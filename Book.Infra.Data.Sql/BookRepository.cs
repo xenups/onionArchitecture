@@ -10,21 +10,21 @@ namespace Book.Infra.Data.Sql
         {
             _bookContext = bookDbContext;
         }
-        public void AddBook(BookDomain book)
+        public void Add(Core.Domain.Book book)
         {
             _bookContext.Books.Add(book);
             _bookContext.SaveChanges();
         }
-        public BookDomain GetBook(long BookId)
+        public Core.Domain.Book GetBook(long BookId)
         {
             return _bookContext.Books.Where(b => b.Id == BookId).SingleOrDefault();
         }
-        public IEnumerable<BookDomain> GetBooks()
+        public IEnumerable<Core.Domain.Book> GetBooks()
         {
-            IEnumerable<BookDomain> books = _bookContext.Books.ToList();
+            IEnumerable<Core.Domain.Book> books = _bookContext.Books.ToList();
             return books;
         }
-        public void DeleteBook(BookDomain book)
+        public void DeleteBook(Core.Domain.Book book)
         {
             _bookContext.Books.Remove(book);
             _bookContext.SaveChanges(true);

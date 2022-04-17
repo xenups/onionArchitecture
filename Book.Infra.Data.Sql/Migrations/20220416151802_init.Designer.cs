@@ -24,7 +24,7 @@ namespace Book.Infra.Data.Sql.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Book.Core.Domain.BookDomain", b =>
+            modelBuilder.Entity("Book.Core.Domain.Book", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
