@@ -1,4 +1,4 @@
-﻿namespace Book.Core.Contracts.Book
+﻿namespace BookApp.Core.Contracts.Books
 {
     public class AddResponse
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace Book.Infra.Data.Sql
+namespace BookApp.Infra.Data.Sql
 {
     internal class BookDbContextFactory : IDesignTimeDbContextFactory<BookDbContext>
     {

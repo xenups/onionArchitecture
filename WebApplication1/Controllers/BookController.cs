@@ -1,5 +1,4 @@
-﻿using Book.Core.ApplicationServices.Book;
-using Book.Core.Contracts.Book;
+﻿using BookApp.Core.Contracts.Books;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,14 +12,17 @@ namespace WebApplication1.Controllers
             _mediator = mediator;
         }
         [HttpGet]
-        public async Task<IActionResult> AddBookControllerAsync([FromQuery] string bookName)
-        {
-            var response = await _mediator.Send(new AddCommand() { Name = bookName });
-            return base.Ok(response);
-        }
-        public IActionResult Index()
+        public async Task<IActionResult> RegisterBook()
         {
             return View();
         }
+        
+        [HttpPost]
+        public async Task<IActionResult> RegisterBook([FromQuery] AddBookCommand addBookCommand)
+        {
+            var response = await _mediator.Send(addBookCommand);
+            return Ok(response);
+        }
+        
     }
 }

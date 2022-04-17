@@ -1,4 +1,4 @@
-﻿namespace Book.Core.ApplicationServices.Book
+﻿namespace BookApp.Core.ApplicationServices.Books
 {
     internal class RemoveBookService
     {

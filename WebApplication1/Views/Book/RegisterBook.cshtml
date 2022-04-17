@@ -1,0 +1,9 @@
+﻿@model BookApp.Core.Contracts.Books.AddBookCommand
+
+<form asp-controller="Book" asp-action="RegisterBook" method="post">
+  <div class="form-group">
+    <label asp-for="Name">Name: </label>
+    <input class="form-control" asp-for="Name" placeholder="نام کتاب را وارد کنید">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

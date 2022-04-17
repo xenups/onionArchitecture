@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Infra", "02.Infra", "{92
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Endpoints", "03.Endpoints", "{AA233B06-82A0-453F-A0AC-9344179AA4C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book.Core.ApplicationServices", "Book.Core.ApplicationServices\Book.Core.ApplicationServices.csproj", "{E2912539-9260-44F4-A656-AEDEF0DB9A20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApp.Core.ApplicationServices", "Book.Core.ApplicationServices\BookApp.Core.ApplicationServices.csproj", "{E2912539-9260-44F4-A656-AEDEF0DB9A20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book.Core.Contracts", "Book.Core.Contracts\Book.Core.Contracts.csproj", "{03E0C0C7-BD10-4E6F-B5F6-09B8260C0C7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApp.Core.Contracts", "Book.Core.Contracts\BookApp.Core.Contracts.csproj", "{03E0C0C7-BD10-4E6F-B5F6-09B8260C0C7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book.Core.Domain", "Book.Core.Domain\Book.Core.Domain.csproj", "{1AE01F28-B932-43B1-A558-3DEB6BEAA078}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApp.Core.Domain", "Book.Core.Domain\BookApp.Core.Domain.csproj", "{1AE01F28-B932-43B1-A558-3DEB6BEAA078}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book.Infra.Data.Sql", "Book.Infra.Data.Sql\Book.Infra.Data.Sql.csproj", "{C9BD899C-E3F3-4FB1-8088-2085DE38C06D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApp.Infra.Data.Sql", "Book.Infra.Data.Sql\BookApp.Infra.Data.Sql.csproj", "{C9BD899C-E3F3-4FB1-8088-2085DE38C06D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{A3E2F72F-FAE7-4696-A564-E8D23D4C62A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApp.Endpoints.Web", "WebApplication1\BookApp.Endpoints.Web.csproj", "{A3E2F72F-FAE7-4696-A564-E8D23D4C62A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

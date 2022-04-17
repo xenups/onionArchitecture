@@ -11,9 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Book.Core.Contracts\Book.Core.Contracts.csproj" />
-    <ProjectReference Include="..\Book.Core.Domain\Book.Core.Domain.csproj" />
-    <ProjectReference Include="..\Book.Infra.Data.Sql\Book.Infra.Data.Sql.csproj" />
+    <ProjectReference Include="..\Book.Core.Contracts\BookApp.Core.Contracts.csproj" />
+    <ProjectReference Include="..\Book.Core.Domain\BookApp.Core.Domain.csproj" />
   </ItemGroup>
 
 </Project>

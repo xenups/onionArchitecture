@@ -1,7 +1,7 @@
-﻿using Book.Core.Contracts.Book;
-using Book.Core.Domain;
+﻿using BookApp.Core.Contracts.Books;
+using BookApp.Core.Domain;
 
-namespace Book.Infra.Data.Sql
+namespace BookApp.Infra.Data.Sql
 {
     public class BookRepository : IBookRepository
     {
@@ -10,23 +10,23 @@ namespace Book.Infra.Data.Sql
         {
             _bookContext = bookDbContext;
         }
-        public void Add(Core.Domain.BookD book)
+        public void Add(Core.Domain.Book book)
         {
             Console.WriteLine("hiiiiiiiiiiiiiiii");
             Console.WriteLine(book.Name);
             _bookContext.Books.Add(book);
             _bookContext.SaveChanges();
         }
-        public Core.Domain.BookD GetBook(long BookId)
+        public Core.Domain.Book GetBook(long BookId)
         {
             return _bookContext.Books.Where(b => b.Id == BookId).SingleOrDefault();
         }
-        public IEnumerable<Core.Domain.BookD> GetBooks()
+        public IEnumerable<Core.Domain.Book> GetBooks()
         {
-            IEnumerable<Core.Domain.BookD> books = _bookContext.Books.ToList();
+            IEnumerable<Core.Domain.Book> books = _bookContext.Books.ToList();
             return books;
         }
-        public void DeleteBook(Core.Domain.BookD book)
+        public void DeleteBook(Core.Domain.Book book)
         {
             _bookContext.Books.Remove(book);
             _bookContext.SaveChanges(true);

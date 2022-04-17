@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Book.Infra.Data.Sql.Migrations
+namespace BookApp.Infra.Data.Sql.Migrations
 {
     public partial class init : Migration
     {

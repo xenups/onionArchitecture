@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Book.Core.ApplicationServices\Book.Core.ApplicationServices.csproj" />
-    <ProjectReference Include="..\Book.Infra.Data.Sql\Book.Infra.Data.Sql.csproj" />
+    <ProjectReference Include="..\Book.Core.ApplicationServices\BookApp.Core.ApplicationServices.csproj" />
+    <ProjectReference Include="..\Book.Infra.Data.Sql\BookApp.Infra.Data.Sql.csproj" />
   </ItemGroup>
 
 </Project>

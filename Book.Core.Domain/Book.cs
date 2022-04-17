@@ -1,6 +1,6 @@
-﻿namespace Book.Core.Domain
+﻿namespace BookApp.Core.Domain
 {
-    public class BookD
+    public class Book
     {
         public long Id { get; set; }
         public string Name { get; set; }

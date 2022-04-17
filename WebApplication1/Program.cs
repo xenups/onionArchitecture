@@ -1,9 +1,9 @@
-using Book.Infra.Data.Sql;
+using BookApp.Infra.Data.Sql;
 using Microsoft.EntityFrameworkCore;
-using Book.Core.Contracts.Book;
+using BookApp.Core.Contracts.Books;
 using System.Reflection;
 using MediatR;
-using Book.Core.ApplicationServices.Book;
+using BookApp.Core.ApplicationServices.Books;
 
 var builder = WebApplication.CreateBuilder(args);
 
