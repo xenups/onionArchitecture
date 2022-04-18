@@ -10,10 +10,8 @@ namespace BookApp.Infra.Data.Sql
         {
             _bookContext = bookDbContext;
         }
-        public void Add(Core.Domain.Book book)
+        public void Add(Book book)
         {
-            Console.WriteLine("hiiiiiiiiiiiiiiii");
-            Console.WriteLine(book.Name);
             _bookContext.Books.Add(book);
             _bookContext.SaveChanges();
         }
@@ -26,7 +24,7 @@ namespace BookApp.Infra.Data.Sql
             IEnumerable<Core.Domain.Book> books = _bookContext.Books.ToList();
             return books;
         }
-        public void DeleteBook(Core.Domain.Book book)
+        public void DeleteBook(Book book)
         {
             _bookContext.Books.Remove(book);
             _bookContext.SaveChanges(true);
