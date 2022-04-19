@@ -9,4 +9,5 @@ namespace BookApp.Core.Contracts.Books
         Book GetBook(long BookId);
         IEnumerable<Book> GetBooks();
     }
+
 }

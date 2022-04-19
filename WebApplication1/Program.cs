@@ -4,6 +4,7 @@ using BookApp.Core.Contracts.Books;
 using System.Reflection;
 using MediatR;
 using BookApp.Core.ApplicationServices.Books;
+using BookApp.Core.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +14,13 @@ builder.Services.AddDbContext<BookDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<IBookRepository, BookRepository>();
-//builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 builder.Services.AddMediatR(typeof(AddBookService).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(RetrieveBookService).GetTypeInfo().Assembly);
+builder.Services.AddAutoMapper(typeof(BookMapperProfile).GetTypeInfo().Assembly);
+builder.Services.AddAutoMapper(typeof(Program));
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

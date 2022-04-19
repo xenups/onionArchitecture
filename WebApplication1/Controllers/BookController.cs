@@ -7,9 +7,11 @@ namespace WebApplication1.Controllers
     public class BookController : Controller
     {
         private readonly IMediator _mediator;
+
         public BookController(IMediator mediator)
         {
             _mediator = mediator;
+
         }
         [HttpGet]
         public IActionResult RegisterBook()
@@ -23,6 +25,12 @@ namespace WebApplication1.Controllers
             var response = await _mediator.Send(addBookCommand);
             return Ok(response);
         }
-
+        [HttpGet]
+        public async Task<IActionResult> RetriveBook([FromQuery] long bookId)
+        {
+            var retrieveBookCommand = new RetriveCommand() { Id = bookId };
+            var response = await _mediator.Send(retrieveBookCommand);
+            return Ok(response);
+        }
     }
 }
