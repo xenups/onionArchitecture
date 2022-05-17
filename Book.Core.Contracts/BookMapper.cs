@@ -10,6 +10,7 @@ namespace BookApp.Core.Contracts
         public BookMapperProfile()
         {
             CreateMap<Book, AddResponse>();
+            CreateMap<Book, RetriveResponse>();
             CreateMap<AddBookCommand, Book>();
             CreateMap<RetriveResponse, Book>();
         }
